@@ -2,8 +2,8 @@ public class Test {
 
   static void add(){
 
-    int a=10;
-    int b=20;
+    int a=35
+    int b=50
     int result = a+b;
     System.out.println("The sum is " +result);
     
