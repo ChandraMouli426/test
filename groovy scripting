@@ -1,9 +1,29 @@
 node {
-    def int a = 10;
-    def int b = 39;
-    def D = a+b ;
-    
+    def name1 = 25
+    def name2 = 0
+    def name5 = 0
+
+    stage('first value') {
+        echo "${name1}"
     }
-   
-   
+
+    stage('change of value') {
+        name2 = 29
+        echo "${name2}"
+    }
+
+    stage('add two numbers') {
+        name5 = name1 + name2
+        echo "${name5}"
+    }
+
+    if (currentBuild.currentResult == 'SUCCESS') {
+        echo "Build Success"
+        echo "Final value: ${name5}"
+    } else {
+        echo "Build Failed"
+        name5 = 0
+        echo "Reset value: ${name5}"
+    }
+}
 
