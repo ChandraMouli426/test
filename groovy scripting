@@ -1,0 +1,9 @@
+node {
+    def int a = 10;
+    def int b = 39;
+    def D = a+b ;
+    
+    }
+   
+   
+
